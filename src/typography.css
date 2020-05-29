@@ -1,0 +1,31 @@
+* {
+	 font-family: 'Raleway', sans-serif;
+}
+
+.color--dark {
+	color: rgb(47, 60, 70);
+}
+
+.color--white {
+	color: rgb(223, 243, 246);
+}
+
+.text--size--sm {
+	font-size: 14px;
+}
+
+.text--size--m {
+	font-size: 18px;
+}
+
+.text--size--l {
+	font-size: 24px;
+}
+
+.text--size--xl {
+	font-size: 32px;
+}
+
+p {
+	line-height: 2em;
+}

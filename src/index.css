@@ -1,0 +1,17 @@
+body, html, h1, h2, h3, h4, p, a {
+	margin: 0;
+}
+
+
+.app-root {
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgb(231, 237, 241);
+}
+
+.footer__container {
+  margin-bottom: 16px;
+}
