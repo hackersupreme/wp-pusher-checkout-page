@@ -55,9 +55,17 @@ npm start
 
 ## Documentation
 
-The top level React component is `App` and it is a `div` element containing a `Header` component, a `Main` component, and a `footer` element.
+The top level React component for the page is called `App` and it is a `div` element containing a `Header` component, a `Main` component, and a `footer` element.
 
-The `Header` component contains the navigation of the site. Its styles are declared in the stylesheet `Header.css` which is located in the same directory. The css naming convention I used was BEM. Here's the css in the file:
+```
+<div>
+	<Header />
+	<Main />
+	<footer>...</footer>
+</div>
+```
+
+The `Header` component contains the navigation of the site. Its styles are declared in the stylesheet `Header.css` which is located in the same directory. The css naming convention I used was BEM. The block for this component is called `header`. Here's an example of what that looks like in the css in the stylsheet:
 
 ```
 .header__container {
@@ -99,27 +107,54 @@ The `Header` component contains the navigation of the site. Its styles are decla
 }
 ```
 
-The `Main` component contains the form of the page and the sidebar. The component's parent element is a `div` which contains a `main` element with the form and an `aside` element with the sidebar.
+The other component in the app is the `Main` component which contains the form of the page and the sidebar. The component's parent element is a `div` which contains a `main` element with a `form` inside and an `Aside` component that contains the sidebar.
 
-The form inside the `main` section is split up into four sections: a header, a `BasicInfo` component, a `PaymentInfo` component, and an `ActionContainer` component. In hindsight a better name for the `ActionContainer` should have been `SubmitContainer` or something like that. All these components are declared in the same `Main.js` file.
+```
+<div>
+	<main>
+		<form>
+		...
+		</form>
+	</main>
+	<Aside />
+</div>
+```
+
+The `form` inside the `main` section is split up into four sections: a header section, a `BasicInfo` component, a `PaymentInfo` component, and an `ActionContainer` component. In hindsight a better name for the `ActionContainer` should have been `SubmitContainer` or something like that. All these components are declared in the same `Main.js` file.
+
+```
+<form>
+	<section>
+	...
+	</section>
+	
+	<BasicInfo />
+	
+	<PaymentInfo />
+	
+	<ActionContainer />
+</form>
+```
 
 The `Main` component holds all the form values in its state and passes down setState functions as props to the two components that contain inputs, `BasicInfo` and `PaymentInfo`.
 
 ```
 <BasicInfo 
-			setFirstName={e => this.setState({first_name: e.target.value})}
-			setLastName={e => this.setState({last_name: e.target.value})}
-			setEmail={e => this.setState({email: e.target.value})}
+	setFirstName={e => this.setState({first_name: e.target.value})}
+	setLastName={e => this.setState({last_name: e.target.value})}
+	setEmail={e => this.setState({email: e.target.value})}
 />
 
 <PaymentInfo 
-			setCardNumber={e => this.setState({card_number: e.target.value})}
-			setCardExpiration={e => this.setState({card_expiration: e.target.value})}
-			setCardCVC={e => this.setState({card_cvc: e.target.value})}
+	setCardNumber={e => this.setState({card_number: e.target.value})}
+	setCardExpiration={e => this.setState({card_expiration: e.target.value})}
+	setCardCVC={e => this.setState({card_cvc: e.target.value})}
 />
 ```
 
-When an input changes, these functions are called, updating the state with the new values. When a user clicks the submit button in the `ActionContainer` all the values of the form are stored in the `Main` component's state and a function could be written into the component that handles that action.
+When an input changes, these functions are called, updating the state of the `Main` component with the new values. When a user clicks the submit button in the `ActionContainer` all the values of the form are then available to be used and a member function of the `Main` component called `handleSubmit` or something could do sometihng with the values.
+
+
 
 
 ## Resources / Contact Info
