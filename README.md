@@ -9,9 +9,9 @@ Contents
 
 ## Overview
 
-This is a checkout page built from a design that was featured on the Youtube series [Refactoring UI](https://www.youtube.com/channel/UCxqiDtkXtOCNJdckODHk9YA). The Youtube series released sketch files of the page design and I used them for practice.
+This is a static checkout page built from a design that was featured on a Youtube video called *Refactoring UI: WP Pusher Checkout Page*. The video comes from the series [Refactoring UI](https://www.youtube.com/channel/UCxqiDtkXtOCNJdckODHk9YA) and they released sketch files of the page design. I took those sketch files and turned them into an actual web page as practice.
 
-The main focus of this was to balance structure and semantics in html and to use the css naming convention Block Element Modifier (BEM) in combination with global styles.
+The main focus of this page was to balance structure and semantics in html and to use the css naming convention Block Element Modifier (BEM) in combination with global styles.
 
 Install the project to see what it looks like.
 
@@ -153,8 +153,6 @@ The `Main` component holds all the form values in its state and passes down setS
 ```
 
 When an input changes, these functions are called, updating the state of the `Main` component with the new values. When a user clicks the submit button in the `ActionContainer` all the values of the form are then available to be used and a member function of the `Main` component called `handleSubmit` or something could do sometihng with the values.
-
-
 
 
 ## Resources / Contact Info
