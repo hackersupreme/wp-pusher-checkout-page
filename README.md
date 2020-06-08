@@ -3,6 +3,7 @@
 Contents 
 
 - Overview
+- Live Site
 - Installation
 - Documentation
 - Resources / Contact Info
@@ -24,6 +25,10 @@ https://www.youtube.com/watch?v=5gdYHlYAKDY
 #### Sketch File
 
 https://www.dropbox.com/s/wtgr2it0cb3vft1/wp-pusher-checkout.sketch?dl=0
+
+## Live Site
+
+http://hackersupreme.com/refactoring-ui/wp-pusher-checkout-page/
 
 ## Installation
 
